@@ -1,7 +1,53 @@
-# Vue 3 + Vite
+# vite-env-for-uni
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a playground for our Interent Technologies subject. This enviroment is made of Vite + Vue 3
 
-## Recommended IDE Setup
+# Setting Up Node.JS and NPM
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Make sure you have Node Js installed in your device. Run the following command to check your node version
+
+```
+node -v
+```
+
+If you see version V1x.xx.xx, then you are good to go. Otherwise, install node from here
+
+```
+https://nodejs.org/en/
+```
+
+Make sure you have Node and NPM are installed correctly by running the following commands in terminal
+
+```
+node -v
+```
+
+and
+
+```
+npm -v
+```
+
+# Installing Yarn
+
+Once you have npm installed you can run the following both to install and upgrade Yarn:
+
+```
+npm install --global yarn
+```
+
+# Installing Dependencies
+
+Navigate to the project folder using the terminal and run
+
+```
+yarn install
+```
+
+# Run Vite Server
+
+Once you are in the project folder, run
+
+```
+yarn dev
+```
