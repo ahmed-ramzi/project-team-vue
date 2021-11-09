@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 class="font-bold text-xl">This is the home page</h1>
-    <a href="/project-team-vue/about">About</a>
+    <a href="/about">About</a>
   </main>
 </template>
 

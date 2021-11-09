@@ -4,12 +4,12 @@ import { createRouter, createWebHistory } from "vue-router"
 
 const routes = [
   {
-    path: "/project-team-vue/",
+    path: "/",
     name: "Home",
     component: () => import("../../pages/Home.vue"),
   },
   {
-    path: "/project-team-vue/about",
+    path: "/about",
     name: "About",
     component: () => import("../../pages/About.vue"),
   },
