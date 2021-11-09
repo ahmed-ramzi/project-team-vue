@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 class="font-bold text-xl">This is the home page</h1>
-    <a href="/about">About</a>
+    <router-link to="/about">About</router-link>
   </main>
 </template>
 
