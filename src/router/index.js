@@ -13,6 +13,11 @@ const routes = [
     name: "About",
     component: () => import("../../pages/About.vue"),
   },
+  {
+    path: "/signin",
+    name: "Signin",
+    component: () => import("../../pages/Signin.vue"),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),
