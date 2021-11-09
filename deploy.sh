@@ -7,8 +7,10 @@ yarn build
 git add dist -f
 git commit -m "New Deploy"
 
-printf "\n\n ~ Pushing to Github\n\n"
+printf "\n\n ~ Pushing to Github Pages\n\n"
 
 git subtree push --prefix dist origin gh-pages
 
-printf "\n\n ~ Deploy completed!\n\n"
+printf "\n Access the page here:\nhttps://ahmed-ramzi.github.io/project-team-vue/"
+
+printf "\n\n ~ Deploy completed!\n"
