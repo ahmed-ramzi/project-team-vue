@@ -28,7 +28,7 @@
         <label>Password</label>
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Password1"
           class="border-2 border-gray-500 rounded-lg focus:ring-2 focus:ring-blue-600"
         />
       </div>
