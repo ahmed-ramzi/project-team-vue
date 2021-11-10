@@ -1,0 +1,1 @@
+import{_ as o}from"./index.d39855f6.js";import{o as e,e as r}from"./vendor.1a998ac1.js";const n={};function c(t,a){return e(),r("h1",null,"Profolio Page Under Construction ...")}var _=o(n,[["render",c]]);export{_ as default};
