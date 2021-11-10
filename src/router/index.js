@@ -13,6 +13,16 @@ const routes = [
     name: "About",
     component: () => import("../../pages/About.vue"),
   },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../../pages/Contact.vue"),
+  },
+  {
+    path: "/profolio",
+    name: "Profolio",
+    component: () => import("../../pages/Profolio.vue"),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),
