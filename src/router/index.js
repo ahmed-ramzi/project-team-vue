@@ -23,6 +23,11 @@ const routes = [
     name: "Profolio",
     component: () => import("../../pages/Profolio.vue"),
   },
+  {
+    path: "/test",
+    name: "Test",
+    component: () => import("../../pages/Test.vue"),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(),

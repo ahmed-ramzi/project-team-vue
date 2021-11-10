@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <div class="flex justify-center">
+  <div>
+    <section class="flex justify-center">
       <img src="../assets/illlustrations/green-circle.png" class="w-1/3 h-1/6" />
 
       <div class="mt-8">
@@ -15,24 +15,24 @@
           <img src="../assets/illlustrations/three-circles.png" class="w-1/2 md:w-3/4" />
         </div>
       </div>
-    </div>
 
-    <div class="teamVue">
-      <!-- TEAM VUE SECTION -->
-      <div class="mx-24">
-        <h2 class="">We Are</h2>
-        <strong>
-          <h1 class="">TEAM VUE</h1>
-        </strong>
-        <p>
-          {{ lorem }}
-        </p>
-      </div>
-    </div>
+      <section class="teamVue">
+        <!-- TEAM VUE SECTION -->
+        <div class="mx-24">
+          <h2 class="">We Are</h2>
+          <strong>
+            <h1 class="">TEAM VUE</h1>
+          </strong>
+          <p>
+            {{ lorem }}
+          </p>
+        </div>
+      </section>
+    </section>
 
     <!-- Why Choose Us Section -->
 
-    <div class="flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100">
+    <section class="flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100">
       <h3>Why Choose Us?</h3>
       <div>
         <ul>
@@ -52,9 +52,9 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="flex items-center my-64 mx-12">
+    <section class="flex items-center my-64 mx-12">
       <img src="../assets/illlustrations/blue-circle.png" class="hidden lg:block lg:w-3/4" />
       <div class="space-y-12">
         <strong>
@@ -70,12 +70,12 @@
 
         <p>{{ lorem }}</p>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <div class="text-center bg-black py-2">
+    <section class="text-center bg-black py-2">
       <p class="text-white">All Rights Received 2021</p>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -128,6 +128,6 @@ ul {
 }
 
 .teamVue {
-  @apply mx-24 items-center flex flex-col justify-center space-y-32;
+  @apply mx-24 flex items-center space-y-32 mb-64;
 }
 </style>
