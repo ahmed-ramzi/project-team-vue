@@ -117,14 +117,14 @@ ul {
 }
 
 .orange {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-yellow-600 rounded-xl;
+  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-yellow-600 rounded-xl drop-shadow;
 }
 
 .blue {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-blue-800 rounded-xl;
+  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-blue-800 rounded-xl drop-shadow;
 }
 .green {
-  @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl;
+  @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl drop-shadow;
 }
 
 .teamVue {
