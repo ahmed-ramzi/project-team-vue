@@ -1,0 +1,1 @@
+import{_ as e}from"./index.c177d7fa.js";import{o,e as s,f as t}from"./vendor.1a998ac1.js";const c={},r={class:"flex justify-center border"},a=t("h1",null,"hello",-1),n=[a];function _(d,f){return o(),s("div",r,n)}var h=e(c,[["render",_]]);export{h as default};
