@@ -7,6 +7,21 @@
         <p>{{ lorem }}</p>
       </div>
 
+      <!-- Mobile Version -->
+      <!-- <div class="cardsMobile">
+        <ul class="mobile">
+          <li v-for="service in services" :key="service.name">
+            <div>
+              <strong>
+                <img :src="service.img" />
+                <p>{{ service.name }}</p>
+              </strong>
+              <p v-html="miniLorem"></p>
+            </div>
+          </li>
+        </ul>
+      </div> -->
+
       <!-- Desktop Verion  -->
       <div class="cardsDesktop">
         <ul class="desktopLeft">
@@ -100,7 +115,7 @@ ul.desktopLeft {
 }
 
 ul.desktopRight {
-  @apply mt-36;
+  @apply mt-6 md:mt-36;
 }
 
 strong > p {
