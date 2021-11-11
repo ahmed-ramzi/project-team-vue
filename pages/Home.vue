@@ -4,10 +4,7 @@
       <img src="../assets/illlustrations/green-circle.png" class="greenCircleImg" />
       <div>
         <div class="nav">
-          <strong> <router-link class="routerText" to="/">HOME</router-link></strong>
-          <strong> <router-link class="routerText" to="/profolio">PROFOLIO</router-link></strong>
-          <strong> <router-link class="routerText" to="/about">ABOUT</router-link></strong>
-          <strong> <router-link class="routerText" to="/contact">CONTACT</router-link></strong>
+          <navigation-bar></navigation-bar>
         </div>
       </div>
 
@@ -73,7 +70,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <section class="rightsSection">
     <p class="rights">All Rights Received 2021</p>
   </section>
@@ -81,7 +77,11 @@
 
 <script>
 // import { ref } from "@vue/reactivity"
+import NavigationBar from "../src/components/NavigationBar.vue"
+
 export default {
+  components: { NavigationBar },
+
   setup() {
     const miniLorem = "Losdsrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     const lorem =
@@ -104,7 +104,7 @@ export default {
 }
 
 .nav {
-  @apply flex flex-col text-right ml-36  md:ml-0 mt-4 md:flex-row md:mx-12 md:ml-12 2xl:ml-32 md:space-x-8 text-gray-700 whitespace-nowrap;
+  @apply ml-36  md:ml-0 mt-4  md:mx-12 md:ml-12 2xl:ml-32;
 }
 
 .circleSection {
@@ -124,8 +124,9 @@ export default {
   @apply mt-8;
 }
 
-.routerText {
-  @apply text-gray-600;
+/* Why Choose us section */
+.chooseUs {
+  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100;
 }
 
 /* Awesome Devs section  */
@@ -143,13 +144,6 @@ h1 {
   @apply text-9xl text-gray-600;
 }
 
-.miniLorem {
-  @apply text-gray-700 pt-4;
-}
-.devsSpacer {
-  @apply space-y-12;
-}
-
 h2 {
   @apply text-7xl text-gray-600;
 }
@@ -162,8 +156,11 @@ h4 {
   @apply text-3xl text-white;
 }
 
-.chooseUs {
-  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100;
+.miniLorem {
+  @apply text-gray-700 pt-4;
+}
+.devsSpacer {
+  @apply space-y-12;
 }
 
 ul {
@@ -171,15 +168,16 @@ ul {
 }
 
 .orange {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-yellow-600 rounded-xl drop-shadow;
+  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-yellow-600 rounded-xl shadow-2xl;
 }
 
 .blue {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-blue-800 rounded-xl drop-shadow;
+  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-blue-800 rounded-xl shadow-2xl;
 }
 .green {
-  @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl drop-shadow;
+  @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl shadow-2xl;
 }
+
 .rightsSection {
   @apply text-center bg-black py-2;
 }
