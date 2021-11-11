@@ -24,7 +24,7 @@
       <strong>
         <h1 class="">TEAM VUE</h1>
       </strong>
-      <p>
+      <p class="spacer">
         {{ lorem }}
       </p>
     </div>
@@ -114,7 +114,11 @@ export default {
 /* Team Vue Section */
 
 .teamVue {
-  @apply mx-2 my-12 lg:mt-0 lg:mx-36;
+  @apply mx-2 mt-12 mb-32 lg:mt-0 lg:mx-36;
+}
+
+.spacer {
+  @apply mt-8;
 }
 
 .routerText {
