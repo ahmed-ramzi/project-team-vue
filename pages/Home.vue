@@ -35,16 +35,19 @@
     <div>
       <ul>
         <li class="orange">
+          <img src="../assets/illlustrations/idea.png" />
           <h4>Idea & Concept</h4>
           <p v-html="miniLorem"></p>
         </li>
 
         <li class="blue">
+          <img src="../assets/illlustrations/marketing.png" />
           <h4>Market Research</h4>
           <p v-html="miniLorem"></p>
         </li>
 
         <li class="green">
+          <img src="../assets/illlustrations/support.png" />
           <h4>Support & Secure</h4>
           <p v-html="miniLorem"></p>
         </li>
@@ -57,8 +60,8 @@
     <div class="devsSpacer">
       <strong>
         <h3>
-          We are awesome <br />
-          developer team
+          We Are Awesome <br />
+          Developer Team
         </h3>
       </strong>
 
