@@ -7,21 +7,6 @@
         <p>{{ lorem }}</p>
       </div>
 
-      <!-- Mobile Version -->
-      <div class="cardsMobile">
-        <ul class="mobile">
-          <li v-for="service in services" :key="service.name">
-            <div>
-              <strong>
-                <img :src="service.img" />
-                <p>{{ service.name }}</p>
-              </strong>
-              <p v-html="miniLorem"></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
       <!-- Desktop Verion  -->
       <div class="cardsDesktop">
         <ul class="desktopLeft">
@@ -80,24 +65,9 @@ export default {
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. Lorem Ipsum is simply dummy text of the printing."
     const miniLorem = "Lorem Ipsum is simply<br>dummy text of the<br>printing and ting "
 
-    const services = [
-      {
-        name: "UI/UX Design",
-        img: "../assets/illlustrations/ui.png",
-      },
-      {
-        name: "Branding",
-        img: "../assets/illlustrations/branding.png",
-      },
-      {
-        name: "Creating Layout",
-        img: "../assets/illlustrations/creative.png",
-      },
-    ]
     return {
       lorem,
       miniLorem,
-      services,
     }
   },
 }
@@ -119,19 +89,11 @@ export default {
   @apply flex flex-col text-center space-y-12 lg:space-y-0 mx-2 lg:w-1/2 lg:text-left lg:mt-52;
 }
 
-.cardsMobile {
-  @apply py-16 md:hidden;
-}
-
-ul.mobile {
-  @apply space-y-4 flex flex-col items-center;
-}
-
 li {
   @apply rounded-xl shadow-2xl py-16 mx-12 md:mx-4 px-8 bg-white w-64;
 }
 .cardsDesktop {
-  @apply hidden  py-16 md:flex md:justify-center;
+  @apply flex flex-col md:flex-row py-16 items-center justify-center;
 }
 ul.desktopLeft {
   @apply flex flex-col space-y-6;
