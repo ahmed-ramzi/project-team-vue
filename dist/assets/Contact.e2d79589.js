@@ -1,0 +1,1 @@
+import{_ as e}from"./index.c472c6f8.js";import{o as c,e as n}from"./vendor.1a998ac1.js";const o={};function r(t,a){return c(),n("h1",null,"Contact Page Under Construction ...")}var f=e(o,[["render",r]]);export{f as default};
