@@ -114,7 +114,7 @@ export default {
 /* Team Vue Section */
 
 .teamVue {
-  @apply mx-8 my-12 lg:mt-0 lg:mx-36;
+  @apply mx-4 my-12 lg:mt-0 lg:mx-36;
 }
 
 .routerText {
