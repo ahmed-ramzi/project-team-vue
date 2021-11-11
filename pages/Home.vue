@@ -104,7 +104,7 @@ export default {
 }
 
 .nav {
-  @apply flex flex-col text-right ml-36  md:ml-0 mt-4 md:flex-row md:mx-12 md:space-x-8 text-gray-700 whitespace-nowrap;
+  @apply flex flex-col text-right ml-36  md:ml-0 mt-4 md:flex-row md:mx-12 md:ml-12 2xl:ml-32 md:space-x-8 text-gray-700 whitespace-nowrap;
 }
 
 .circleSection {
@@ -117,7 +117,7 @@ export default {
 /* Team Vue Section */
 
 .teamVue {
-  @apply mx-2 mt-12 mb-32 lg:mt-0 lg:mx-36;
+  @apply mx-2 mt-12 mb-32 lg:mt-0 md:mx-36;
 }
 
 .spacer {
