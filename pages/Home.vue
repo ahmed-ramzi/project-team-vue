@@ -25,7 +25,7 @@
         <h1 class="">TEAM VUE</h1>
       </strong>
       <p class="spacer">
-        {{ lorem }}
+        Team Vue is dedicated to creating the best product and provide the best customer service in existence. We are a gathering of like-minded individuals who aim to change the world with our visionary and innovative techniques. 
       </p>
     </div>
   </section>
@@ -37,19 +37,19 @@
         <li class="orange">
           <img src="../assets/illlustrations/idea.png" />
           <h4>Idea & Concept</h4>
-          <p v-html="miniLorem"></p>
+          <p>is to build secure and seamless e-commerce solutions for your business emphasizing customer satisfaction.</p>
         </li>
 
         <li class="blue">
           <img src="../assets/illlustrations/marketing.png" />
           <h4>Market Research</h4>
-          <p v-html="miniLorem"></p>
+          <p >We help businesses with tackling the biggest obstacle in any e-commerce business, which is market research and analysis </p>
         </li>
 
         <li class="green">
           <img src="../assets/illlustrations/support.png" />
           <h4>Support & Secure</h4>
-          <p v-html="miniLorem"></p>
+          <p>are of utmost importance for our company as it helps us in gaining trust and loyalty with our customers.</p>
         </li>
       </ul>
     </div>
@@ -66,7 +66,7 @@
       </strong>
 
       <strong>
-        <p class="miniLorem">{{ miniLorem }}</p>
+        <p class="miniLorem">We are a creative team of developers who love developing and helping people and it is why we, like minded individuals decided to gather up and to make this our life mission. </p>
       </strong>
 
       <p>{{ lorem }}</p>
