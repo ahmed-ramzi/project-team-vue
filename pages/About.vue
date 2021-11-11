@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 class="font-bold text-xl">This is the about page</h1>
-    <router-link to="/">Homepage</router-link>
+    <router-link to="/project-team-vue/">Homepage</router-link>
   </main>
 </template>
 

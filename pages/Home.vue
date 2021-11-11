@@ -1,24 +1,28 @@
 <template>
   <div>
-    <section class="flex justify-center">
-      <img src="../assets/illlustrations/green-circle.png" class="w-1/3 h-1/6" />
+    <section class="hero">
+      <img src="../assets/illlustrations/green-circle.png" class="greenCircleImg" />
 
-      <div class="mt-8">
-        <div class="md:mx-12 space-x-8 text-gray-700 whitespace-nowrap">
-          <strong> <router-link to="/">HOME</router-link></strong>
-          <strong> <router-link to="/profolio">PROFOLIO</router-link></strong>
-          <strong> <router-link to="/about">ABOUT</router-link></strong>
-          <strong> <router-link to="/contact">CONTACT US</router-link></strong>
+      <div class="spacer">
+        <div class="nav">
+          <strong> <router-link to="/project-team-vue/">HOME</router-link></strong>
+          <strong> <router-link to="/project-team-vue/profolio">PROFOLIO</router-link></strong>
+          <strong> <router-link to="/project-team-vue/about">ABOUT</router-link></strong>
+          <strong> <router-link to="/project-team-vue/contact">CONTACT US</router-link></strong>
         </div>
 
         <div class="flex justify-end">
-          <img src="../assets/illlustrations/three-circles.png" class="w-1/2 md:w-3/4" />
+          <img src="../assets/illlustrations/three-circles.png" class="blueCircle" />
         </div>
       </div>
+    </section>
 
-      <section class="teamVue">
+
+    <!-- Why Choose Us Section -->
+
+    <section class="teamVue">
         <!-- TEAM VUE SECTION -->
-        <div class="mx-24">
+        <div class="sideMargin">
           <h2 class="">We Are</h2>
           <strong>
             <h1 class="">TEAM VUE</h1>
@@ -28,11 +32,8 @@
           </p>
         </div>
       </section>
-    </section>
 
-    <!-- Why Choose Us Section -->
-
-    <section class="flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100">
+    <section class="chooseUs">
       <h3>Why Choose Us?</h3>
       <div>
         <ul>
@@ -54,9 +55,9 @@
       </div>
     </section>
 
-    <section class="flex items-center my-64 mx-12">
-      <img src="../assets/illlustrations/blue-circle.png" class="hidden lg:block lg:w-3/4" />
-      <div class="space-y-12">
+    <section class="awesomeDevs">
+      <img src="../assets/illlustrations/blue-circle.png" class="bottomCircle" />
+      <div class="devsSpacer">
         <strong>
           <h3>
             We are awesome <br />
@@ -65,7 +66,7 @@
         </strong>
 
         <strong>
-          <p class="text-gray-700 pt-4">{{ miniLorem }}</p>
+          <p class="miniLorem">{{ miniLorem }}</p>
         </strong>
 
         <p>{{ lorem }}</p>
@@ -73,8 +74,8 @@
     </section>
 
     <!-- Footer -->
-    <section class="text-center bg-black py-2">
-      <p class="text-white">All Rights Received 2021</p>
+    <section class="rightsSection">
+      <p class="rights">All Rights Received 2021</p>
     </section>
   </div>
 </template>
@@ -96,6 +97,59 @@ export default {
 </script>
 
 <style scoped>
+
+.hero{
+  @apply flex justify-center ;
+}
+.greenCircleImg{
+  @apply w-1/3 h-1/6
+}
+
+.spacer{
+  @apply mt-8
+}
+.nav{
+  @apply md:mx-12 space-x-8 text-gray-700 whitespace-nowrap 
+}
+
+.blueCircle {
+  @apply w-1/2 md:w-3/4  ml-36
+}
+
+.awesomeDevs{
+  @apply flex items-center my-64 mx-12
+}
+
+.bottomCircle{
+  @apply hidden lg:block lg:w-3/4
+}
+
+.miniLorem{
+  @apply text-gray-700 pt-4
+}
+.devsSpacer{
+  @apply space-y-12
+}
+
+.teamVue {
+  @apply mx-24 flex items-center space-y-32 mb-64;
+}
+
+.chooseUs{
+  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100
+}
+
+.sideMargin{
+  @apply mx-28
+}
+
+.rightsSection{
+  @apply text-center bg-black py-2
+}
+
+.rights{
+  @apply text-white
+}
 h1 {
   @apply text-9xl text-gray-700;
 }
@@ -127,7 +181,5 @@ ul {
   @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl drop-shadow;
 }
 
-.teamVue {
-  @apply mx-24 flex items-center space-y-32 mb-64;
-}
+
 </style>
