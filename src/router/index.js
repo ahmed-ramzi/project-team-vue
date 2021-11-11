@@ -49,7 +49,7 @@ const routes = [
     component: () => import("../../pages/Profolio.vue"),
   },
   {
-    path: "/project-team-vue/test",
+    path: "/test",
     name: "Test",
     component: () => import("../../pages/Test.vue"),
   },

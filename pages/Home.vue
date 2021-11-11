@@ -1,98 +1,86 @@
 <template>
-  <div>
-    <section class="hero">
+  <section>
+    <div class="topSection">
       <img src="../assets/illlustrations/green-circle.png" class="greenCircleImg" />
-
-      <div class="spacer">
-        <!-- <div class="nav">
-          <strong> <router-link to="/project-team-vue/">HOME</router-link></strong>
-          <strong> <router-link to="/project-team-vue/profolio">PROFOLIO</router-link></strong>
-          <strong> <router-link to="/project-team-vue/about">ABOUT</router-link></strong>
-          <strong> <router-link to="/project-team-vue/contact">CONTACT US</router-link></strong>
-        </div> -->
-
-        <div class="nav">
-          <strong> <router-link to="/">HOME</router-link></strong>
-          <strong> <router-link to="/profolio">PROFOLIO</router-link></strong>
-          <strong> <router-link to="/about">ABOUT</router-link></strong>
-          <strong> <router-link to="/contact">CONTACT US</router-link></strong>
-        </div>
-
-        <div class="flex justify-end">
-          <img src="../assets/illlustrations/three-circles.png" class="blueCircle" />
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Why Choose Us Section -->
-
-    <section class="teamVue">
-        <!-- TEAM VUE SECTION -->
-        <div class="sideMargin">
-          <h2 class="">We Are</h2>
-          <strong>
-            <h1 class="">TEAM VUE</h1>
-          </strong>
-          <p>
-            {{ lorem }}
-          </p>
-        </div>
-      </section>
-
-    <section class="chooseUs">
-      <h3>Why Choose Us?</h3>
       <div>
-        <ul>
-          <li class="orange">
-            <h4>Idea & Concept</h4>
-            <p v-html="miniLorem"></p>
-          </li>
-
-          <li class="blue">
-            <h4>Market Research</h4>
-            <p v-html="miniLorem"></p>
-          </li>
-
-          <li class="green">
-            <h4>Support & Secure</h4>
-            <p v-html="miniLorem"></p>
-          </li>
-        </ul>
+        <div class="nav">
+          <strong> <router-link class="routerText" to="/">HOME</router-link></strong>
+          <strong> <router-link class="routerText" to="/profolio">PROFOLIO</router-link></strong>
+          <strong> <router-link class="routerText" to="/about">ABOUT</router-link></strong>
+          <strong> <router-link class="routerText" to="/contact">CONTACT</router-link></strong>
+        </div>
       </div>
-    </section>
 
-    <section class="awesomeDevs">
-      <img src="../assets/illlustrations/blue-circle.png" class="bottomCircle" />
-      <div class="devsSpacer">
-        <strong>
-          <h3>
-            We are awesome <br />
-            developer team
-          </h3>
-        </strong>
-
-        <strong>
-          <p class="miniLorem">{{ miniLorem }}</p>
-        </strong>
-
-        <p>{{ lorem }}</p>
+      <div class="circleSection">
+        <img src="../assets/illlustrations/three-circles.png" class="blueCircle" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <section class="rightsSection">
-      <p class="rights">All Rights Received 2021</p>
-    </section>
-  </div>
+  <section class="teamVue">
+    <!-- TEAM VUE SECTION -->
+    <div>
+      <h2 class="">We Are</h2>
+      <strong>
+        <h1 class="">TEAM VUE</h1>
+      </strong>
+      <p>
+        {{ lorem }}
+      </p>
+    </div>
+  </section>
+
+  <section class="chooseUs">
+    <h3>Why Choose Us?</h3>
+    <div>
+      <ul>
+        <li class="orange">
+          <h4>Idea & Concept</h4>
+          <p v-html="miniLorem"></p>
+        </li>
+
+        <li class="blue">
+          <h4>Market Research</h4>
+          <p v-html="miniLorem"></p>
+        </li>
+
+        <li class="green">
+          <h4>Support & Secure</h4>
+          <p v-html="miniLorem"></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="awesomeDevs">
+    <img src="../assets/illlustrations/blue-circle.png" class="bottomCircle" />
+    <div class="devsSpacer">
+      <strong>
+        <h3>
+          We are awesome <br />
+          developer team
+        </h3>
+      </strong>
+
+      <strong>
+        <p class="miniLorem">{{ miniLorem }}</p>
+      </strong>
+
+      <p>{{ lorem }}</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="rightsSection">
+    <p class="rights">All Rights Received 2021</p>
+  </section>
 </template>
 
 <script>
 // import { ref } from "@vue/reactivity"
 export default {
   setup() {
-    const miniLorem =
-      "Losdsrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    const miniLorem = "Losdsrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     const lorem =
       " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim idest laborum."
     return {
@@ -104,73 +92,71 @@ export default {
 </script>
 
 <style scoped>
-
-.hero{
-  @apply flex justify-center ;
-}
-.greenCircleImg{
-  @apply w-1/3 h-1/6
+.topSection {
+  @apply flex;
 }
 
-.spacer{
-  @apply mt-8
-}
-.nav{
-  @apply md:mx-12 space-x-8 text-gray-700 whitespace-nowrap 
+.greenCircleImg {
+  @apply w-1/3 h-1/6;
 }
 
-.blueCircle {
-  @apply w-1/2 md:w-3/4  ml-36
+.nav {
+  @apply flex flex-col text-right ml-36  md:ml-0 md:mt-4 md:flex-row md:mx-12 md:space-x-8 text-gray-700 whitespace-nowrap;
 }
 
-.awesomeDevs{
-  @apply flex items-center my-64 mx-12
+.circleSection {
+  @apply hidden md:block;
 }
 
-.bottomCircle{
-  @apply hidden lg:block lg:w-3/4
-}
-
-.miniLorem{
-  @apply text-gray-700 pt-4
-}
-.devsSpacer{
-  @apply space-y-12
-}
+/* .blueCircle {
+  @apply w-3/4;
+} */
+/* Team Vue Section */
 
 .teamVue {
-  @apply mx-24 flex items-center space-y-32 mb-64;
+  @apply mx-8 my-12 lg:mx-36;
 }
 
-.chooseUs{
-  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100
+.routerText {
+  @apply text-gray-600;
 }
 
-.sideMargin{
-  @apply mx-28
+/* Awesome Devs section  */
+
+.awesomeDevs {
+  @apply flex items-center my-64 mx-12;
 }
 
-.rightsSection{
-  @apply text-center bg-black py-2
+.bottomCircle {
+  @apply hidden lg:block lg:w-3/4;
 }
 
-.rights{
-  @apply text-white
-}
+/* General Styling */
 h1 {
-  @apply text-9xl text-gray-700;
+  @apply text-9xl text-gray-600;
+}
+
+.miniLorem {
+  @apply text-gray-700 pt-4;
+}
+.devsSpacer {
+  @apply space-y-12;
 }
 
 h2 {
-  @apply text-7xl text-gray-700;
+  @apply text-7xl text-gray-600;
 }
 
 h3 {
-  @apply text-5xl text-gray-700;
+  @apply text-5xl text-gray-600;
 }
 
 h4 {
   @apply text-3xl text-white;
+}
+
+.chooseUs {
+  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100;
 }
 
 ul {
@@ -187,6 +173,11 @@ ul {
 .green {
   @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl drop-shadow;
 }
+.rightsSection {
+  @apply text-center bg-black py-2;
+}
 
-
+.rights {
+  @apply text-white;
+}
 </style>
