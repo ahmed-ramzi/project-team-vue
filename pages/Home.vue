@@ -101,7 +101,7 @@ export default {
 }
 
 .nav {
-  @apply flex flex-col text-right ml-36  md:ml-0 md:mt-4 md:flex-row md:mx-12 md:space-x-8 text-gray-700 whitespace-nowrap;
+  @apply flex flex-col text-right ml-36  md:ml-0 mt-4 md:flex-row md:mx-12 md:space-x-8 text-gray-700 whitespace-nowrap;
 }
 
 .circleSection {
@@ -114,7 +114,7 @@ export default {
 /* Team Vue Section */
 
 .teamVue {
-  @apply mx-8 my-12 lg:mx-36;
+  @apply mx-8 my-12 lg:mt-0 lg:mx-36;
 }
 
 .routerText {
