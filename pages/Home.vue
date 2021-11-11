@@ -4,11 +4,18 @@
       <img src="../assets/illlustrations/green-circle.png" class="greenCircleImg" />
 
       <div class="spacer">
-        <div class="nav">
+        <!-- <div class="nav">
           <strong> <router-link to="/project-team-vue/">HOME</router-link></strong>
           <strong> <router-link to="/project-team-vue/profolio">PROFOLIO</router-link></strong>
           <strong> <router-link to="/project-team-vue/about">ABOUT</router-link></strong>
           <strong> <router-link to="/project-team-vue/contact">CONTACT US</router-link></strong>
+        </div> -->
+
+        <div class="nav">
+          <strong> <router-link to="/">HOME</router-link></strong>
+          <strong> <router-link to="/profolio">PROFOLIO</router-link></strong>
+          <strong> <router-link to="/about">ABOUT</router-link></strong>
+          <strong> <router-link to="/contact">CONTACT US</router-link></strong>
         </div>
 
         <div class="flex justify-end">
