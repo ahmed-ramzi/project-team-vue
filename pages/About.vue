@@ -12,20 +12,96 @@
     </section>
 
     <section class="middleSection">
-      <div class="portfolio" v-for="team in teams" :key="team.name">
+      <div class="portfolio">
         <div class="imgSize">
-          <img :src="team.img" />
+          <img src="../assets/portraits/ramzi.jpeg" />
         </div>
 
         <div class="detail">
           <div class="detailIntro">
             <strong>
-              <h4 class="mobile">{{ team.name }}</h4>
+              <h4 class="mobile">Ramzi</h4>
             </strong>
             <strong>
-              <h2 class="desktop">{{ team.name }}</h2>
+              <h2 class="desktop">Ramzi</h2>
             </strong>
-            <p :class="team.color">{{ team.title }}</p>
+            <p class="orange">Frontend Developer</p>
+          </div>
+          <p>{{ miniLorem }}</p>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div class="imgSize">
+          <img src="../assets/portraits/harry.JPG" />
+        </div>
+
+        <div class="detail">
+          <div class="detailIntro">
+            <strong>
+              <h4 class="mobile">Harry</h4>
+            </strong>
+            <strong>
+              <h2 class="desktop">Harry</h2>
+            </strong>
+            <p class="green">Project Manager</p>
+          </div>
+          <p>{{ miniLorem }}</p>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div class="imgSize">
+          <img src="../assets/portraits/mazo.JPG" />
+        </div>
+
+        <div class="detail">
+          <div class="detailIntro">
+            <strong>
+              <h4 class="mobile">Mazo</h4>
+            </strong>
+            <strong>
+              <h2 class="desktop">Mazo</h2>
+            </strong>
+            <p class="red">Backend Developer</p>
+          </div>
+          <p>{{ miniLorem }}</p>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div class="imgSize">
+          <img src="../assets/portraits/azim.JPG" />
+        </div>
+
+        <div class="detail">
+          <div class="detailIntro">
+            <strong>
+              <h4 class="mobile">Azim</h4>
+            </strong>
+            <strong>
+              <h2 class="desktop">Azime</h2>
+            </strong>
+            <p class="blue">Design Director</p>
+          </div>
+          <p>{{ miniLorem }}</p>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <div class="imgSize">
+          <img src="" />
+        </div>
+
+        <div class="detail">
+          <div class="detailIntro">
+            <strong>
+              <h4 class="mobile">Tohir</h4>
+            </strong>
+            <strong>
+              <h2 class="desktop">Tohir</h2>
+            </strong>
+            <p class="pink">Content Manager</p>
           </div>
           <p>{{ miniLorem }}</p>
         </div>
@@ -55,7 +131,7 @@ export default {
       { name: "Azim", title: "Design Director", bio: "", img: "../assets/portraits/azim.JPG", color: "blue" },
       { name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
     ]
-    return { miniLorem, teams }
+    return { miniLorem }
   },
 }
 </script>
