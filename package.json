@@ -8,6 +8,7 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },

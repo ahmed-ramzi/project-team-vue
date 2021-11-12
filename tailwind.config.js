@@ -5,17 +5,6 @@ module.exports = {
 
   darkMode: false, // or 'media' or 'class'
   theme: {
-    // screens: {
-    //   tablet: "640px",
-    //   // => @media (min-width: 640px) { ... }
-
-    //   laptop: "1024px",
-    //   // => @media (min-width: 1024px) { ... }
-
-    //   desktop: "1280px",
-    //   // => @media (min-width: 1280px) { ... }
-    // },
-
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
@@ -32,12 +21,17 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      padding: {
+        "1/3": "33.33333%",
+        "2/3": "66.66667%",
+      },
+    },
   },
   variants: {
     extend: {
       boxShadow: ["active"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 }

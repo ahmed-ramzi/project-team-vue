@@ -22,7 +22,8 @@
         <h1 class="">TEAM VUE</h1>
       </strong>
       <p class="spacer">
-        Team Vue is dedicated to creating the best product and provide the best customer service in existence. We are a gathering of like-minded individuals who aim to change the world with our visionary and innovative techniques. 
+        Team Vue is dedicated to creating the best product and provide the best customer service in existence. We are a gathering of like-minded individuals who aim to change the
+        world with our visionary and innovative techniques.
       </p>
     </div>
   </section>
@@ -40,7 +41,7 @@
         <li class="blue">
           <img src="../assets/illlustrations/marketing.png" />
           <h4>Market Research</h4>
-          <p >We help businesses with tackling the biggest obstacle in any e-commerce business, which is market research and analysis </p>
+          <p>We help businesses with tackling the biggest obstacle in any e-commerce business, which is market research and analysis</p>
         </li>
 
         <li class="green">
@@ -63,24 +64,25 @@
       </strong>
 
       <strong>
-        <p class="miniLorem">We are a creative team of developers who love developing and helping people and it is why we, like minded individuals decided to gather up and to make this our life mission. </p>
+        <p class="miniLorem">
+          We are a creative team of developers who love developing and helping people and it is why we, like minded individuals decided to gather up and to make this our life
+          mission.
+        </p>
       </strong>
 
       <p>{{ lorem }}</p>
     </div>
   </section>
-
-  <section class="rightsSection">
-    <p class="rights">All Rights Received 2021</p>
-  </section>
+  <the-footer></the-footer>
 </template>
 
 <script>
 // import { ref } from "@vue/reactivity"
 import NavigationBar from "../src/components/NavigationBar.vue"
+import TheFooter from "../src/components/TheFooter.vue"
 
 export default {
-  components: { NavigationBar },
+  components: { NavigationBar, TheFooter },
 
   setup() {
     const miniLorem = "Losdsrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -104,16 +106,16 @@ export default {
 }
 
 .nav {
-  @apply ml-36  md:ml-0 mt-4  md:mx-12 md:ml-12 2xl:ml-32;
+  @apply ml-36  mt-4  md:mx-12 md:ml-12 lg:ml-36;
 }
 
 .circleSection {
   @apply hidden md:block;
 }
 
-/* .blueCircle {
-  @apply w-3/4;
-} */
+.blueCircle {
+  @apply hidden lg:block;
+}
 /* Team Vue Section */
 
 .teamVue {
@@ -176,13 +178,5 @@ ul {
 }
 .green {
   @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl shadow-2xl;
-}
-
-.rightsSection {
-  @apply text-center bg-black py-2;
-}
-
-.rights {
-  @apply text-white;
 }
 </style>

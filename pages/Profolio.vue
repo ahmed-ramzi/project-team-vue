@@ -63,18 +63,15 @@
       </div>
     </div>
   </section>
-
-  <section class="rightsSection">
-    <p class="rights">All Rights Received 2021</p>
-  </section>
+  <the-footer></the-footer>
 </template>
 
 <script>
 import NavigationBar from "../src/components/NavigationBar.vue"
+import TheFooter from "../src/components/TheFooter.vue"
+
 export default {
-  components: {
-    NavigationBar,
-  },
+  components: { NavigationBar, TheFooter },
   setup() {
     const lorem =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. Lorem Ipsum is simply dummy text of the printing."
@@ -163,13 +160,5 @@ h4 {
 
 p {
   @apply text-gray-600;
-}
-
-.rightsSection {
-  @apply text-center bg-black py-2;
-}
-
-.rights {
-  @apply text-white;
 }
 </style>
