@@ -1,64 +1,86 @@
 <template>
-  <div class="topSection">
-    <section class="greenSection">
-      <navigation-bar class="nav"></navigation-bar>
-      <div class="aboutUs">
-        <h2>Meet</h2>
-        <h2>The</h2>
+  <section class="topSection">
+    <navigation-bar class="nav"></navigation-bar>
+    <div class="yellowSection">
+      <div class="makeDesign">
+        <h2 class="title-black">We Make Your Design Service Faster</h2>
+        <p>{{ lorem }}</p>
+      </div>
+
+      <!-- Mobile Version -->
+      <!-- <div class="cardsMobile">
+        <ul class="mobile">
+          <li v-for="service in services" :key="service.name">
+            <div>
+              <strong>
+                <img :src="service.img" />
+                <p>{{ service.name }}</p>
+              </strong>
+              <p v-html="miniLorem"></p>
+            </div>
+          </li>
+        </ul>
+      </div> -->
+
+      <!-- Desktop Verion  -->
+      <div class="cardsDesktop">
+        <ul class="desktopLeft">
+          <li>
+            <strong>
+              <img src="../assets/illlustrations/ui.png" />
+              <p>UI/UX Design</p>
+            </strong>
+            <p v-html="miniLorem"></p>
+          </li>
+          <li>
+            <strong>
+              <img src="../assets/illlustrations/creative.png" />
+              <p>Creating Layout</p>
+            </strong>
+            <p v-html="miniLorem"></p>
+          </li>
+        </ul>
+
+        <ul class="desktopRight">
+          <li class>
+            <strong>
+              <img src="../assets/illlustrations/branding.png" />
+              <p>Branding</p>
+            </strong>
+            <p v-html="miniLorem"></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bestDeveloper">
+      <img src="../assets/illlustrations/chart-glow.png" />
+      <div class="bestDevs">
         <strong>
-          <h1>Team</h1>
+          <h3>We Are The Best Developers In CZ & Deliver More Than Expected</h3>
         </strong>
+        <p>{{ lorem }}</p>
       </div>
-    </section>
-
-    <section class="middleSection">
-      <div class="portfolio" v-for="team in teams" :key="team.id">
-        <div class="imgSize">
-          <img :src="team.img" :alt="team.name" />
-        </div>
-
-        <div class="detail">
-          <div class="detailIntro">
-            <strong>
-              <h4 class="mobile">{{ team.name }}</h4>
-            </strong>
-            <strong>
-              <h2 class="desktop">{{ team.name }}</h2>
-            </strong>
-            <p :class="team.color">{{ team.title }}</p>
-          </div>
-          <p>{{ miniLorem }}</p>
-        </div>
-      </div>
-    </section>
-
-    <the-footer></the-footer>
-  </div>
+    </div>
+  </section>
+  <the-footer></the-footer>
 </template>
 
 <script>
 import NavigationBar from "../src/components/NavigationBar.vue"
 import TheFooter from "../src/components/TheFooter.vue"
-import harry from "../assets/portraits/harry.png"
-import mazo from "../assets/portraits/mazo.png"
-import azim from "../assets/portraits/azim.png"
-import ramzi from "../assets/portraits/ramzi.jpeg"
+
 export default {
-  components: {
-    NavigationBar,
-    TheFooter,
-  },
+  components: { NavigationBar, TheFooter },
   setup() {
-    const miniLorem =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer."
-    const teams = [
-      { id: "ramzi", name: "Ramzi", title: "Frontend Developer", bio: "", img: ramzi, color: "orange" },
-      { id: "harry", name: "Harry", title: "Project Manager", bio: "", img: harry, color: "green" },
-      { id: "mazo", name: "Mazo", title: "Backend Developer", bio: "", img: mazo, color: "red" },
-      { id: "azim", name: "Azim", title: "Design Director", bio: "", img: azim, color: "blue" },
-      { id: "tohir", name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
-    ]
-    return { miniLorem, teams }
+    const lorem =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. Lorem Ipsum is simply dummy text of the printing."
+    const miniLorem = "Lorem Ipsum is simply<br>dummy text of the<br>printing and ting "
+
+    return {
+      lorem,
+      miniLorem,
+    }
   },
 }
 </script>
@@ -67,68 +89,75 @@ export default {
 .topSection {
   @apply flex flex-col;
 }
-.greenSection {
-  @apply bg-green-100 space-y-24 pb-24;
+
+.yellowSection {
+  @apply lg:flex lg:justify-center bg-yellow-100;
 }
-.aboutUs {
-  @apply text-center space-y-4;
+.nav {
+  @apply pt-4 items-center md:flex md:justify-center bg-yellow-100;
 }
 
-.nav {
-  @apply pt-4 items-center md:flex md:justify-center;
+.makeDesign {
+  @apply flex flex-col text-center space-y-12 lg:space-y-0 mx-2 lg:w-1/2 lg:text-left lg:mt-52;
 }
-.middleSection {
-  @apply py-32 md:grid md:grid-cols-2 lg:grid-cols-3;
+
+li {
+  @apply rounded-xl shadow-2xl py-16 mx-12 md:mx-4 px-8 bg-white w-64;
 }
-.portfolio {
-  @apply mx-4 space-y-2  py-12;
+.cardsDesktop {
+  @apply flex flex-col md:flex-row py-16 items-center justify-center;
 }
-.imgSize {
-  @apply relative h-0 pb-2/3 sm:pt-1/3 lg:pt-2/3;
+ul.desktopLeft {
+  @apply flex flex-col space-y-6;
 }
-img {
-  @apply absolute inset-0 w-full h-full object-cover shadow-lg rounded-xl border;
+
+ul.desktopRight {
+  @apply mt-6 md:mt-36;
 }
-.detail {
-  @apply space-y-4;
+
+strong > p {
+  @apply text-black my-4;
 }
-.mobile {
-  @apply md:hidden;
+
+strong > h3 {
+  @apply text-black my-4;
 }
-.desktop {
-  @apply hidden md:block;
+
+h2.title-black {
+  @apply text-black my-4;
 }
-.orange {
-  @apply text-yellow-500;
+
+div > p {
+  @apply pb-4;
 }
-.blue {
-  @apply text-blue-500;
+
+/* Best Developer Section */
+
+.bestDeveloper {
+  @apply flex flex-col lg:flex-row self-center space-y-12 py-24 bg-white lg:w-4/5;
 }
-.green {
-  @apply text-green-500;
+
+.bestDevs {
+  @apply mx-4 lg:pt-32;
 }
-.red {
-  @apply text-red-500;
-}
-.pink {
-  @apply text-pink-500;
-}
-.orange {
-  @apply text-yellow-500;
-}
+
 /* General Styling */
 h1 {
   @apply text-9xl text-gray-600;
 }
+
 h2 {
   @apply text-7xl text-gray-600;
 }
+
 h3 {
   @apply text-5xl text-gray-600;
 }
+
 h4 {
-  @apply text-3xl text-gray-600;
+  @apply text-3xl text-white;
 }
+
 p {
   @apply text-gray-600;
 }
