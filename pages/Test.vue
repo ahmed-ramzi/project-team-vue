@@ -14,7 +14,7 @@
     <section class="middleSection">
       <div class="portfolio" v-for="team in teams" :key="team.name">
         <div class="imgSize">
-          <img :src="team.img" :alt="team" />
+          <img :src="team.img" :alt="team.img" />
         </div>
 
         <div class="detail">
