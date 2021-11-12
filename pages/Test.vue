@@ -12,9 +12,9 @@
     </section>
 
     <section class="middleSection">
-      <div class="portfolio" v-for="team in teams" :key="team.name">
+      <div class="portfolio" v-for="team in teams" :key="team.id">
         <div class="imgSize">
-          <img :src="team.img" :alt="team.img" />
+          <img :src="team.img" :alt="team.id" />
         </div>
 
         <div class="detail">
@@ -48,11 +48,11 @@ export default {
     const miniLorem =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer."
     const teams = [
-      { name: "Ramzi", title: "Frontend Developer", bio: "", img: "../assets/portraits/ramzi.jpeg", color: "orange" },
-      { name: "Harry", title: "Project Manager", bio: "", img: "../assets/portraits/harry.png", color: "green" },
-      { name: "Mazo", title: "Backend Developer", bio: "", img: "../assets/portraits/mazo.png", color: "red" },
-      { name: "Azim", title: "Design Director", bio: "", img: "../assets/portraits/azim.png", color: "blue" },
-      { name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
+      { id: "ramzi", name: "Ramzi", title: "Frontend Developer", bio: "", img: "../assets/portraits/ramzi.jpeg", color: "orange" },
+      { id: "harry", name: "Harry", title: "Project Manager", bio: "", img: "../assets/portraits/harry.png", color: "green" },
+      { id: "mazo", name: "Mazo", title: "Backend Developer", bio: "", img: "../assets/portraits/mazo.png", color: "red" },
+      { id: "azim", name: "Azim", title: "Design Director", bio: "", img: "../assets/portraits/azim.png", color: "blue" },
+      { id: "tohir", name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
     ]
     return { miniLorem, teams }
   },
