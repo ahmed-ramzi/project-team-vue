@@ -41,6 +41,10 @@ import NavigationBar from "../src/components/NavigationBar.vue"
 import TheFooter from "../src/components/TheFooter.vue"
 
 import ramzi from "../assets/portraits/ramzi.jpeg"
+import azim from "../assets/portraits/azimLow.png"
+
+import azimLow from "../assets/portraits/azimLowExtra.png"
+
 export default {
   components: {
     NavigationBar,
@@ -51,8 +55,8 @@ export default {
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer."
     const teams = [
       { id: "ramzi", name: "Ramzi", title: "Frontend Developer", bio: "", img: ramzi, color: "orange" },
-      { id: "harry", name: "Harry", title: "Project Manager", bio: "", img: "../assets/portraits/harry.png", color: "green" },
-      { id: "mazo", name: "Mazo", title: "Backend Developer", bio: "", img: "../assets/portraits/mazo.png", color: "red" },
+      { id: "harry", name: "Harry", title: "Project Manager", bio: "", img: azim, color: "green" },
+      { id: "mazo", name: "Mazo", title: "Backend Developer", bio: "", img: azimLow, color: "red" },
       { id: "azim", name: "Azim", title: "Design Director", bio: "", img: "../assets/portraits/azim.png", color: "blue" },
       { id: "tohir", name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
     ]
