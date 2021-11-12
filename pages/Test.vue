@@ -1,183 +1,131 @@
 <template>
-  <section>
-    <div class="topSection">
-      <img src="../assets/illlustrations/green-circle.png" class="greenCircleImg" />
-      <div>
-        <div class="nav">
-          <strong> <router-link class="routerText" to="/">HOME</router-link></strong>
-          <strong> <router-link class="routerText" to="/profolio">PROFOLIO</router-link></strong>
-          <strong> <router-link class="routerText" to="/about">ABOUT</router-link></strong>
-          <strong> <router-link class="routerText" to="/contact">CONTACT</router-link></strong>
+  <div class="topSection">
+    <section class="greenSection">
+      <navigation-bar class="nav"></navigation-bar>
+      <div class="aboutUs">
+        <h2>Meet</h2>
+        <h2>The</h2>
+        <strong>
+          <h1>Team</h1>
+        </strong>
+      </div>
+    </section>
+
+    <section class="middleSection">
+      <div class="portfolio" v-for="team in teams" :key="team.name">
+        <div class="imgSize">
+          <img :src="team.img" />
+        </div>
+
+        <div class="detail">
+          <div class="detailIntro">
+            <strong>
+              <h4 class="mobile">{{ team.name }}</h4>
+            </strong>
+            <strong>
+              <h2 class="desktop">{{ team.name }}</h2>
+            </strong>
+            <p :class="team.color">{{ team.title }}</p>
+          </div>
+          <p>{{ miniLorem }}</p>
         </div>
       </div>
+    </section>
 
-      <div class="circleSection">
-        <img src="../assets/illlustrations/three-circles.png" class="blueCircle" />
-      </div>
-    </div>
-  </section>
-
-  <section class="teamVue">
-    <!-- TEAM VUE SECTION -->
-    <div>
-      <h2 class="">We Are</h2>
-      <strong>
-        <h1 class="">TEAM VUE</h1>
-      </strong>
-      <p>
-        {{ lorem }}
-      </p>
-    </div>
-  </section>
-
-  <section class="chooseUs">
-    <h3>Why Choose Us?</h3>
-    <div>
-      <ul>
-        <li class="orange">
-          <h4>Idea & Concept</h4>
-          <p v-html="miniLorem"></p>
-        </li>
-
-        <li class="blue">
-          <h4>Market Research</h4>
-          <p v-html="miniLorem"></p>
-        </li>
-
-        <li class="green">
-          <h4>Support & Secure</h4>
-          <p v-html="miniLorem"></p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="awesomeDevs">
-    <img src="../assets/illlustrations/blue-circle.png" class="bottomCircle" />
-    <div class="devsSpacer">
-      <strong>
-        <h3>
-          We are awesome <br />
-          developer team
-        </h3>
-      </strong>
-
-      <strong>
-        <p class="miniLorem">{{ miniLorem }}</p>
-      </strong>
-
-      <p>{{ lorem }}</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <section class="rightsSection">
-    <p class="rights">All Rights Received 2021</p>
-  </section>
+    <the-footer></the-footer>
+  </div>
 </template>
 
 <script>
-// import { ref } from "@vue/reactivity"
+import NavigationBar from "../src/components/NavigationBar.vue"
+import TheFooter from "../src/components/TheFooter.vue"
 export default {
+  components: {
+    NavigationBar,
+    TheFooter,
+  },
   setup() {
-    const miniLorem = "Losdsrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    const lorem =
-      " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim idest laborum."
-    return {
-      miniLorem,
-      lorem,
-    }
+    const miniLorem =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer."
+    const teams = [
+      { name: "Ramzi", title: "Frontend Developer", bio: "", img: "../assets/portraits/ramzi.jpeg", color: "orange" },
+      { name: "Harry", title: "Project Manager", bio: "", img: "../assets/portraits/harry.png", color: "green" },
+      { name: "Mazo", title: "Backend Developer", bio: "", img: "../assets/portraits/mazo.png", color: "red" },
+      { name: "Azim", title: "Design Director", bio: "", img: "../assets/portraits/azim.png", color: "blue" },
+      { name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
+    ]
+    return { miniLorem, teams }
   },
 }
 </script>
 
 <style scoped>
 .topSection {
-  @apply flex;
+  @apply flex flex-col;
 }
-
-.greenCircleImg {
-  @apply w-1/3 h-1/6;
+.greenSection {
+  @apply bg-green-100 space-y-24 pb-24;
+}
+.aboutUs {
+  @apply text-center space-y-4;
 }
 
 .nav {
-  @apply flex flex-col text-right ml-36  md:ml-0 md:mt-4 md:flex-row md:mx-12 md:space-x-8 text-gray-700 whitespace-nowrap;
+  @apply pt-4 items-center md:flex md:justify-center;
 }
-
-.circleSection {
+.middleSection {
+  @apply py-32 md:grid md:grid-cols-2 lg:grid-cols-3;
+}
+.portfolio {
+  @apply mx-4 space-y-2  py-12;
+}
+.imgSize {
+  @apply relative h-0 pb-2/3 sm:pt-1/3 lg:pt-2/3;
+}
+img {
+  @apply absolute inset-0 w-full h-full object-cover shadow-lg rounded-xl border;
+}
+.detail {
+  @apply space-y-4;
+}
+.mobile {
+  @apply md:hidden;
+}
+.desktop {
   @apply hidden md:block;
 }
-
-/* .blueCircle {
-  @apply w-3/4;
-} */
-/* Team Vue Section */
-
-.teamVue {
-  @apply mx-8 my-12 lg:mx-36;
+.orange {
+  @apply text-yellow-500;
 }
-
-.routerText {
-  @apply text-gray-600;
+.blue {
+  @apply text-blue-500;
 }
-
-/* Awesome Devs section  */
-
-.awesomeDevs {
-  @apply flex items-center my-64 mx-12;
+.green {
+  @apply text-green-500;
 }
-
-.bottomCircle {
-  @apply hidden lg:block lg:w-3/4;
+.red {
+  @apply text-red-500;
 }
-
+.pink {
+  @apply text-pink-500;
+}
+.orange {
+  @apply text-yellow-500;
+}
 /* General Styling */
 h1 {
   @apply text-9xl text-gray-600;
 }
-
-.miniLorem {
-  @apply text-gray-700 pt-4;
-}
-.devsSpacer {
-  @apply space-y-12;
-}
-
 h2 {
   @apply text-7xl text-gray-600;
 }
-
 h3 {
   @apply text-5xl text-gray-600;
 }
-
 h4 {
-  @apply text-3xl text-white;
+  @apply text-3xl text-gray-600;
 }
-
-.chooseUs {
-  @apply flex flex-col items-center space-y-12 py-32 mt-12 bg-yellow-100;
-}
-
-ul {
-  @apply grid grid-cols-1 space-y-12 lg:grid-cols-3 lg:space-y-0 lg:space-x-12 mx-12 text-white items-center;
-}
-
-.orange {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-yellow-600 rounded-xl drop-shadow;
-}
-
-.blue {
-  @apply flex flex-col items-center  text-center space-y-10  py-32 px-6 text-white bg-blue-800 rounded-xl drop-shadow;
-}
-.green {
-  @apply flex flex-col items-center text-center  space-y-10  py-32 px-6 text-white bg-green-600 rounded-xl drop-shadow;
-}
-.rightsSection {
-  @apply text-center bg-black py-2;
-}
-
-.rights {
-  @apply text-white;
+p {
+  @apply text-gray-600;
 }
 </style>
