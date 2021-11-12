@@ -33,7 +33,7 @@
 
       <div class="portfolio">
         <div class="imgSize">
-          <img src="../assets/portraits/harry.JPG" />
+          <img src="../assets/portraits/harry.png" />
         </div>
 
         <div class="detail">
@@ -52,7 +52,7 @@
 
       <div class="portfolio">
         <div class="imgSize">
-          <img src="../assets/portraits/mazo.JPG" />
+          <img src="../assets/portraits/mazo.png" />
         </div>
 
         <div class="detail">
@@ -71,7 +71,7 @@
 
       <div class="portfolio">
         <div class="imgSize">
-          <img src="../assets/portraits/azim.JPG" />
+          <img src="../assets/portraits/azim.png" />
         </div>
 
         <div class="detail">
@@ -80,7 +80,7 @@
               <h4 class="mobile">Azim</h4>
             </strong>
             <strong>
-              <h2 class="desktop">Azime</h2>
+              <h2 class="desktop">Azim</h2>
             </strong>
             <p class="blue">Design Director</p>
           </div>
