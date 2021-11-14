@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="topSection">
-      <navigation-bar />
+      <navigation-bar class="nav" />
 
       <img src="../assets/illlustrations/contact-us.png" alt="Contact Us" class="image" />
 
@@ -77,7 +77,7 @@ export default {
   },
   setup() {
     const messageSent = ref(false)
-    const sendMessage = (e) => {
+    const sendMessage = () => {
       messageSent.value = !messageSent.value
     }
     const schema = yup.object({
@@ -97,6 +97,10 @@ export default {
 <style scoped>
 .topSection {
   @apply space-y-8 pb-16 flex flex-col items-center;
+}
+
+.nav {
+  @apply pt-4;
 }
 .contact {
   @apply text-center;
