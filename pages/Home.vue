@@ -78,7 +78,7 @@
 
 <script>
 // import { ref } from "@vue/reactivity"
-import NavigationBar from "../src/components/NavigationBar.vue"
+import NavigationBar from "../src/components/NavigationBarWithMobile.vue"
 import TheFooter from "../src/components/TheFooter.vue"
 
 export default {

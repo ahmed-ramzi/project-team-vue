@@ -27,7 +27,7 @@
             </strong>
             <p :class="team.color">{{ team.title }}</p>
           </div>
-          <p>{{ miniLorem }}</p>
+          <p>{{ team.bio }}</p>
         </div>
       </div>
     </section>
@@ -43,6 +43,7 @@ import ramzi from "../assets/portraits/ramzi.jpeg"
 import harry from "../assets/portraits/harry.png"
 import mazo from "../assets/portraits/mazo.png"
 import azim from "../assets/portraits/azim.png"
+import tohir from "../assets/portraits/tohir.jpeg"
 
 export default {
   components: {
@@ -50,16 +51,49 @@ export default {
     TheFooter,
   },
   setup() {
-    const miniLorem =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer."
     const teams = [
-      { id: "ramzi", name: "Ramzi", title: "Frontend Developer", bio: "", img: ramzi, color: "orange" },
-      { id: "harry", name: "Harry", title: "Project Manager", bio: "", img: harry, color: "green" },
-      { id: "mazo", name: "Mazo", title: "Backend Developer", bio: "", img: mazo, color: "red" },
-      { id: "azim", name: "Azim", title: "Design Director", bio: "", img: azim, color: "blue" },
-      { id: "tohir", name: "Tohir", title: "Content Manager", bio: "", img: "", color: "pink" },
+      {
+        id: "ramzi",
+        name: "Ramzi",
+        title: "Frontend Developer",
+        bio: "I used to be a backend developer with multiple language experince. Now I do full time Frontend development with Vue framework and also I build automation test for quality assurance.",
+        img: ramzi,
+        color: "orange",
+      },
+      {
+        id: "harry",
+        name: "Harry",
+        title: "Project Manager",
+        bio: "Pursuing my career in Informatics with a strong background of management in F&B industry. Intending to sharpen and strengthen my project management skills because of extensive in my current company. Honing my experience in security related field as ongoing projects are about Infosec and it helps me in flexing of related tasks.",
+        img: harry,
+        color: "green",
+      },
+      {
+        id: "mazo",
+        name: "Mazo",
+        title: "Backend Developer",
+        bio: "I completed my bachelors  in CZU and now doing my masters in the same university. Interested in data analysis and backened development",
+        img: mazo,
+        color: "red",
+      },
+      {
+        id: "azim",
+        name: "Azim",
+        title: "Design Director",
+        bio: "Interested in business intelligence filed, data warehousing, ETL and databases. Study at CULS is fun and a guide to vast area of correlated subjects such as economics, security, law, management and lastly informatics. Enjoy learning a drop from each which might be useful to enhance my general knowledge about so many things.",
+        img: azim,
+        color: "blue",
+      },
+      {
+        id: "tohir",
+        name: "Tohir",
+        title: "Content Manager",
+        bio: "I am a CCNA compatible EUC Technician of enterprise Network Infrastructure with more than 8 years experience. Troubleshooting, repair, and preventative maintenance of end user computing equipment and Network equipment at corporate locations. I work on assignments of a diverse scope where analysis of data and hardware requires evaluation of identifiable factors. I have exercised judgment with supervision within the generally defined practices and policies in selecting methods and techniques for obtaining solutions and acts as a liaison between customers, departments, and within the organization to lead problem resolution.",
+        img: tohir,
+        color: "pink",
+      },
     ]
-    return { miniLorem, teams }
+    return { teams }
   },
 }
 </script>

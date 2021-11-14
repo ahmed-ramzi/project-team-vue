@@ -10,7 +10,7 @@
 
 <style scoped>
 .main {
-  @apply flex justify-center text-center space-x-4 md:space-x-8 text-gray-700 whitespace-nowrap;
+  @apply flex flex-col text-right md:flex-row md:space-x-8 text-gray-700 whitespace-nowrap;
 }
 .routerText {
   @apply text-gray-600;

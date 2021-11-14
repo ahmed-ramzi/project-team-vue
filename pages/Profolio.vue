@@ -7,22 +7,6 @@
         <p>{{ lorem }}</p>
       </div>
 
-      <!-- Mobile Version -->
-      <!-- <div class="cardsMobile">
-        <ul class="mobile">
-          <li v-for="service in services" :key="service.name">
-            <div>
-              <strong>
-                <img :src="service.img" />
-                <p>{{ service.name }}</p>
-              </strong>
-              <p v-html="miniLorem"></p>
-            </div>
-          </li>
-        </ul>
-      </div> -->
-
-      <!-- Desktop Verion  -->
       <div class="cardsDesktop">
         <ul class="desktopLeft">
           <li>
@@ -30,14 +14,17 @@
               <img src="../assets/illlustrations/ui.png" />
               <p>UI/UX Design</p>
             </strong>
-            <p v-html="miniLorem"></p>
+            <p>
+              Another highly critical goal that we strive to excel in is UI/UX design. The visual of the website is very important for our customers and therefore, it must be
+              worked upon with great care.
+            </p>
           </li>
           <li>
             <strong>
               <img src="../assets/illlustrations/creative.png" />
               <p>Creating Layout</p>
             </strong>
-            <p v-html="miniLorem"></p>
+            <p>We aid customers in finding what makes their brand unique and which factors can influence their business development</p>
           </li>
         </ul>
 
@@ -47,7 +34,10 @@
               <img src="../assets/illlustrations/branding.png" />
               <p>Branding</p>
             </strong>
-            <p v-html="miniLorem"></p>
+            <p>
+              Creativity is what makes the website pop out and so, communicating with customers and carefully understanding their ideas is key to provide them with a design that
+              best fits them.
+            </p>
           </li>
         </ul>
       </div>
@@ -75,12 +65,7 @@ export default {
   setup() {
     const lorem =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. Lorem Ipsum is simply dummy text of the printing."
-    const miniLorem = "Lorem Ipsum is simply<br>dummy text of the<br>printing and ting "
-
-    return {
-      lorem,
-      miniLorem,
-    }
+    return { lorem }
   },
 }
 </script>
@@ -90,15 +75,16 @@ export default {
   @apply flex flex-col;
 }
 
-.yellowSection {
-  @apply lg:flex lg:justify-center bg-yellow-100;
-}
 .nav {
   @apply pt-4 items-center md:flex md:justify-center bg-yellow-100;
 }
 
+.yellowSection {
+  @apply flex flex-col items-center lg:flex-row lg:justify-center bg-yellow-100;
+}
+
 .makeDesign {
-  @apply flex flex-col text-center space-y-12 lg:space-y-0 mx-2 lg:w-1/2 lg:text-left lg:mt-52;
+  @apply flex flex-col text-center space-y-12 lg:space-y-0  mx-4 sm:mx-24 lg:text-left mt-24 md:w-8/12 lg:w-3/12 lg:mt-0;
 }
 
 li {
@@ -134,7 +120,7 @@ div > p {
 /* Best Developer Section */
 
 .bestDeveloper {
-  @apply flex flex-col lg:flex-row self-center space-y-12 py-24 bg-white lg:w-4/5;
+  @apply flex flex-col lg:flex-row self-center space-y-12 py-24 bg-white lg:w-4/5 2xl:w-3/5;
 }
 
 .bestDevs {
